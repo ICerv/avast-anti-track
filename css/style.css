@@ -1,1 +1,81 @@
-/*# sourceMappingURL=style.css.map */
+/*===== COLORS =====*/
+/*===== SIZES =====*/
+/*===== FONT AND TYPOGRAPHY =====*/
+/*===== FONT WEIGHT =====*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+*,
+body,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 100vw;
+  min-height: 100vh;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.375;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+/*===== GOOGLE FONTS =====*/
+/*** HEADER ***/
+.header {
+  height: 3rem;
+  margin: 0.625rem;
+}
+.header__logo--img {
+  width: 7.25rem;
+  height: 2.25rem;
+}
+
+/*** MAIN ***/
+main {
+  min-height: 100vh;
+  padding: 0 1.25rem;
+  text-align: center;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.hero {
+  height: auto;
+}
+.hero__heading {
+  margin-bottom: 15px;
+  color: #000;
+  line-height: 1.375;
+  font-size: 2.5rem;
+}
+.hero__text {
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+.hero__image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/*** FOOTER ***//*# sourceMappingURL=style.css.map */

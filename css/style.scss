@@ -1,6 +1,46 @@
 @import './partials/_variables.scss';
 @import './partials/_mixins.scss';
-@import './partials/_reset.scss';
+@import './partials/_base.scss';
 
 /*===== GOOGLE FONTS =====*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/*** HEADER ***/
+.header {
+  height: 3rem;
+  margin: 0.625rem;
+
+  &__logo--img {
+    width: 7.25rem;
+    height: 2.25rem;
+  }
+}
+
+/*** MAIN ***/
+main {
+  @include container;
+}
+.hero {
+  height: auto;
+
+  &__heading {
+    margin-bottom: 15px;
+    color: $primary-color;
+    line-height: 1.375;
+    font-size: $font-size_h1;
+  }
+
+  &__text {
+    font-size: $font-size_text;
+    line-height: 1.5;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    vertical-align: middle;
+  }
+}
+
+/*** FOOTER ***/

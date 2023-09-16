@@ -1,0 +1,13 @@
+@mixin onDesktop {
+  @media (min-width: 992px) {
+    @content;
+  }
+}
+
+@mixin container {
+  min-height: 100vh;
+  padding: 0 1.25rem;
+  text-align: center;
+  position: relative;
+  overflow-x: hidden;
+}
