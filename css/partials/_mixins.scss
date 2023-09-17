@@ -1,8 +1,14 @@
 @mixin container {
-  min-height: 100vh;
   max-width: 88%;
   margin: 0 auto;
   text-align: center;
   position: relative;
   overflow-x: hidden;
+}
+
+@mixin lightText {
+  font-size: 0.75rem;
+  margin: 20px;
+  line-height: $line-height;
+  color: $secondary-color;
 }

@@ -55,12 +55,15 @@ section {
 
 /*** MAIN ***/
 main {
-  min-height: 100vh;
   max-width: 88%;
   margin: 0 auto;
   text-align: center;
   position: relative;
   overflow-x: hidden;
+}
+
+section {
+  padding-top: 2rem;
 }
 
 /*** SECTION 1 ***/
@@ -75,7 +78,7 @@ main {
 }
 .hero__text {
   font-size: 0.875rem;
-  line-height: 1.5;
+  line-height: 1.7;
   margin-bottom: 1.25rem;
 }
 .hero__image {
@@ -110,7 +113,6 @@ main {
 }
 .price__box--content {
   max-width: 100%;
-  width: 25rem;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -153,8 +155,8 @@ main {
   margin-right: 10px;
 }
 .price__box--icon-avast {
-  width: 40px;
-  height: 40px;
+  width: 2rem;
+  height: 2rem;
 }
 .price__box--button {
   width: -moz-fit-content;
@@ -171,12 +173,12 @@ main {
 }
 .price__box--description {
   font-size: 0.75rem;
-  margin: 10px;
+  margin: 20px;
   line-height: 1.5;
   color: #8a8e91;
 }
 .price__box--support {
-  font-size: 1rem;
+  font-size: 0.875rem;
 }
 
 /*** SECTION 3 ***/
@@ -222,27 +224,109 @@ main {
 }
 
 /*** SECTION 4 ***/
-/*** FOOTER ***/
-footer {
-  height: 100px;
-  margin: 15px;
-}
-footer__top {
-  font-size: 0.875rem;
-  line-height: 1.5;
-}
-footer__bottom {
+.price__box {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 15px;
+}
+.price__box--content-avast {
+  width: 100%;
+  border: 3px solid #ffddbf;
+  background-color: #fff1e5;
+  border-radius: 2rem;
+  padding: 1.5rem;
+  margin: 0 auto;
+  flex: 1 1 100%;
+  max-width: 600px;
+  min-height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.price__box--heading-avast {
+  font-size: 1.5rem;
+}
+.price__box--text-avast {
+  font-size: 12px;
+  line-height: 1.5;
+}
+.price__box--text-avast strong {
+  font-size: 2rem;
+}
+.price__box--text-avast span {
+  margin: 15px 0;
+  color: #000;
+  line-height: 1.375;
+  font-size: 1rem;
+}
+.price__box--button-avast {
+  width: -moz-fit-content;
+  width: fit-content;
+  color: #fff;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  border-radius: 25px;
+  padding: 1rem 2.5rem;
+  background-color: #0070f6;
+  outline: none;
+  border: none;
+}
+.price__box--guarantee {
+  font-size: 0.75rem;
+}
+.price__box--description-avast {
+  font-size: 0.75rem;
+  margin: 20px;
+  line-height: 1.5;
+  color: #8a8e91;
+}
+
+/*** FOOTER ***/
+.footer .footer__top {
+  font-size: 0.75rem;
+  margin: 20px;
+  line-height: 1.5;
+  color: #8a8e91;
+  max-width: 88%;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  overflow-x: hidden;
+  text-align: left;
+  margin: 2rem auto;
+}
+.footer .footer__bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 1.5rem;
+  margin: 20px auto;
+}
+.footer .footer__link--avast {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+.footer .footer__link {
+  color: #0070f6;
 }
 
 @media (min-width: 768px) {
+  .header {
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 2.5rem 0;
+  }
+  .header__logo--img {
+    width: 10rem;
+    height: 3rem;
+  }
   main {
-    min-height: 100vh;
     max-width: 88%;
     margin: 0 auto;
     text-align: center;
@@ -283,6 +367,12 @@ footer__bottom {
     padding: 0.8rem 3rem;
     font-weight: 600;
   }
+  .price__box--button:hover {
+    background-color: #7bb5fb;
+  }
+  .price__box--button:active {
+    background-color: #7bb5fb;
+  }
   .price__box--description {
     font-size: 1rem;
     margin: 1rem 7rem;
@@ -318,8 +408,58 @@ footer__bottom {
   .product__card--description {
     font-size: 0.875rem;
   }
+  .price__box--icon-avast {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  .price__box--heading-avast {
+    font-size: 2rem;
+  }
+  .price__box--content-avast {
+    padding: 2rem;
+    min-height: 400px;
+  }
+  .price__box--text-avast strong {
+    font-size: 2.5rem;
+  }
+  .price__box--text-avast span {
+    font-size: 1.3rem;
+  }
+  .price__box--button-avast {
+    padding: 1.1rem 3rem;
+  }
+  .price__box--description-avast {
+    font-size: 0.75rem;
+    margin: 20px;
+    line-height: 1.5;
+    color: #8a8e91;
+    font-size: 0.75rem;
+    margin: 1rem 9rem;
+  }
+  /*** FOOTER ***/
+  .footer {
+    max-width: 70%;
+    margin: 0 auto;
+  }
+  .footer .footer__bottom {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .footer .footer__link {
+    color: #0070f6;
+  }
 }
 @media (min-width: 1024px) {
+  .header {
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 2.5rem 0;
+    min-height: 8rem;
+  }
+  .header__logo--img {
+    width: 15rem;
+    height: 5rem;
+  }
   section {
     padding-top: 2rem;
   }
@@ -334,6 +474,8 @@ footer__bottom {
   }
   .price__box--content {
     width: 40rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
   .price__box--text strong {
     font-size: 2rem;
@@ -345,9 +487,10 @@ footer__bottom {
     font-size: 1.2rem;
     padding: 1rem 4rem;
   }
-  .price__box--description {
-    font-size: 1.1rem;
-    margin: 1.2rem 11rem;
+  .price__box--description,
+  .price__box--description-avast {
+    font-size: 1rem;
+    margin: 1.2rem 12rem;
   }
   .product__heading {
     font-size: 2rem;
@@ -366,5 +509,11 @@ footer__bottom {
   }
   .product__card--description {
     font-size: 1.125rem;
+  }
+  .price__box--support {
+    font-size: 1.1rem;
+  }
+  .footer__top {
+    font-size: 1rem;
   }
 }/*# sourceMappingURL=style.css.map */
