@@ -20,6 +20,9 @@
 main {
   @include container;
 }
+
+/*** SECTION 1 ***/
+
 .hero {
   height: auto;
 
@@ -27,11 +30,11 @@ main {
     margin-bottom: 15px;
     color: $primary-color;
     line-height: 1.375;
-    font-size: $font-size_h1;
+    font-size: $font-xl;
   }
 
   &__text {
-    font-size: $font-size_text;
+    font-size: $font-md;
     line-height: 1.5;
   }
 
@@ -42,5 +45,85 @@ main {
     vertical-align: middle;
   }
 }
+
+/*** SECTION 2 ***/
+
+.price__box {
+  &--offer {
+  }
+
+  &--heading {
+    margin: 15px 0;
+    color: $primary-color;
+    line-height: 1.375;
+    font-size: $font-lg;
+  }
+
+  &--text {
+    font-size: $font-md;
+    line-height: 1.5;
+  }
+}
+
+.card__price {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  border: 1px solid $border-card;
+  background-color: $bg-card;
+  border-radius: 15px;
+  padding: 5px;
+
+  &--content span {
+    margin: 15px 0;
+    color: $primary-color;
+    line-height: 1.375;
+    font-size: $font-md;
+  }
+
+  strong {
+    font-size: $font-base;
+    line-height: 1.375;
+    color: $primary-color;
+  }
+
+  &--icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+
+  &--button {
+    width: fit-content;
+    color: $white;
+    font-size: 0.625rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    border-radius: 20px;
+    padding: 8px 30px;
+    background-color: $blue;
+    outline: none;
+    border: none;
+  }
+
+  &--button:hover {
+    background-color: $blue-hover;
+  }
+
+  &--button:active {
+    background-color: $blue-hover;
+  }
+}
+
+.description--text {
+  font-size: $font-sm;
+  line-height: $line-height;
+  margin: 1rem 2.3rem;
+  color: $secondary-color;
+}
+/*** SECTION 3 ***/
+/*** SECTION 4 ***/
 
 /*** FOOTER ***/

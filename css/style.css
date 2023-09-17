@@ -21,7 +21,7 @@ body {
   min-height: 100vh;
   font-family: "Roboto", sans-serif;
   font-size: 0.875rem;
-  line-height: 1.375;
+  line-height: 1.5;
 }
 
 img {
@@ -58,6 +58,7 @@ main {
   overflow-x: hidden;
 }
 
+/*** SECTION 1 ***/
 .hero {
   height: auto;
 }
@@ -76,6 +77,75 @@ main {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  vertical-align: middle;
 }
 
+/*** SECTION 2 ***/
+.price__box--heading {
+  margin: 15px 0;
+  color: #000;
+  line-height: 1.375;
+  font-size: 1.5rem;
+}
+.price__box--text {
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.card__price {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  border: 1px solid #ffddbf;
+  background-color: #fff1e5;
+  border-radius: 15px;
+  padding: 5px;
+}
+.card__price--content span {
+  margin: 15px 0;
+  color: #000;
+  line-height: 1.375;
+  font-size: 0.875rem;
+}
+.card__price strong {
+  font-size: 1rem;
+  line-height: 1.375;
+  color: #000;
+}
+.card__price--icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+.card__price--button {
+  width: -moz-fit-content;
+  width: fit-content;
+  color: #fff;
+  font-size: 0.625rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  border-radius: 20px;
+  padding: 8px 30px;
+  background-color: #0070f6;
+  outline: none;
+  border: none;
+}
+.card__price--button:hover {
+  background-color: #7bb5fb;
+}
+.card__price--button:active {
+  background-color: #7bb5fb;
+}
+
+.description--text {
+  font-size: 0.625rem;
+  line-height: 1.5;
+  margin: 1rem 2.3rem;
+  color: #8a8e91;
+}
+
+/*** SECTION 3 ***/
+/*** SECTION 4 ***/
 /*** FOOTER ***//*# sourceMappingURL=style.css.map */
