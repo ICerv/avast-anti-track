@@ -38,6 +38,10 @@ h6 {
   padding: 0;
 }
 
+section {
+  padding-top: 10px;
+}
+
 /*===== GOOGLE FONTS =====*/
 /*** HEADER ***/
 .header {
@@ -142,10 +146,31 @@ main {
 .description--text {
   font-size: 0.625rem;
   line-height: 1.5;
-  margin: 1rem 2.3rem;
+  margin: 1rem;
   color: #8a8e91;
 }
 
 /*** SECTION 3 ***/
+.product__heading {
+  margin: 15px 0;
+  color: #000;
+  line-height: 1.375;
+  font-size: large;
+}
+.product__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  border: 1px solid #d9dee1;
+  border-radius: 2rem;
+  margin-bottom: 0.3rem;
+}
+.product__img {
+  width: 180px;
+  height: 100px;
+  vertical-align: middle;
+}
+
 /*** SECTION 4 ***/
 /*** FOOTER ***//*# sourceMappingURL=style.css.map */

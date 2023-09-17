@@ -120,10 +120,35 @@ main {
 .description--text {
   font-size: $font-sm;
   line-height: $line-height;
-  margin: 1rem 2.3rem;
+  margin: 1rem;
   color: $secondary-color;
 }
 /*** SECTION 3 ***/
+
+.product {
+  &__heading {
+    margin: 15px 0;
+    color: $primary-color;
+    line-height: 1.375;
+    font-size: large;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    border: 1px solid $border-product__card;
+    border-radius: 2rem;
+    margin-bottom: 0.3rem;
+  }
+
+  &__img {
+    width: 180px;
+    height: 100px;
+    vertical-align: middle;
+  }
+}
 /*** SECTION 4 ***/
 
 /*** FOOTER ***/
