@@ -6,6 +6,20 @@
 /*===== GOOGLE FONTS =====*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
+/*** SCROLL TOP ***/
+.scroll__top {
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+  color: $secondary-color;
+  padding: 10px;
+  border-radius: 50%;
+  z-index: 1000;
+
+  &--icon {
+    font-size: $font-xl;
+  }
+}
 /*** HEADER ***/
 .header {
   height: 3rem;

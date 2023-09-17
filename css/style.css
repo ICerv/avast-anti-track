@@ -43,6 +43,20 @@ section {
 }
 
 /*===== GOOGLE FONTS =====*/
+/*** SCROLL TOP ***/
+.scroll__top {
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+  color: #8a8e91;
+  padding: 10px;
+  border-radius: 50%;
+  z-index: 1000;
+}
+.scroll__top--icon {
+  font-size: 2rem;
+}
+
 /*** HEADER ***/
 .header {
   height: 3rem;
