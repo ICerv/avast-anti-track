@@ -30,7 +30,7 @@ main {
     margin-bottom: 15px;
     color: $primary-color;
     line-height: 1.375;
-    font-size: $font-xl;
+    font-size: $font-2xl;
   }
 
   &__text {
@@ -59,42 +59,58 @@ main {
     font-size: $font-lg;
   }
 
+  &--content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    border: 1px solid $border-card;
+    background-color: $bg-card;
+    border-radius: 15px;
+    padding: 5px;
+  }
+
   &--text {
     font-size: $font-md;
     line-height: 1.5;
-  }
-}
 
-.card__price {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-  border: 1px solid $border-card;
-  background-color: $bg-card;
-  border-radius: 15px;
-  padding: 5px;
+    strong {
+      font-size: large;
+      line-height: 1.375;
+    }
 
-  &--content span {
-    margin: 15px 0;
-    color: $primary-color;
-    line-height: 1.375;
-    font-size: $font-md;
+    span {
+      margin: 15px 0;
+      color: $primary-color;
+      line-height: 1.375;
+      font-size: $font-base;
+    }
   }
 
-  strong {
-    font-size: $font-base;
+  &--text-large {
+    font-size: $font-lg;
     line-height: 1.375;
-    color: $primary-color;
+
+    strong {
+      font-size: $font-2xl;
+    }
+
+    span {
+      font-size: $font-lg;
+    }
   }
 
   &--icon {
     width: 20px;
     height: 20px;
     margin-right: 10px;
-  }
 
+    &-avast {
+      width: 40px;
+      height: 40px;
+    }
+  }
   &--button {
     width: fit-content;
     color: $white;
@@ -108,21 +124,26 @@ main {
     border: none;
   }
 
-  &--button:hover {
-    background-color: $blue-hover;
+  // &--button:hover {
+  //   background-color: $blue-hover;
+  // }
+
+  // &--button:active {
+  //   background-color: $blue-hover;
+  // }
+
+  &--description {
+    font-size: $font-md;
+    line-height: $line-height;
+    margin: 1rem;
+    color: $secondary-color;
   }
 
-  &--button:active {
-    background-color: $blue-hover;
+  &--support {
+    font-size: $font-base;
   }
 }
 
-.description--text {
-  font-size: $font-sm;
-  line-height: $line-height;
-  margin: 1rem;
-  color: $secondary-color;
-}
 /*** SECTION 3 ***/
 
 .product {
@@ -152,3 +173,22 @@ main {
 /*** SECTION 4 ***/
 
 /*** FOOTER ***/
+footer {
+  height: 100px;
+  margin: 15px;
+
+  &__top {
+    font-size: $font-md;
+    line-height: 1.5;
+  }
+
+  &__bottom {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    // gap: 15px;
+    margin: 15px;
+  }
+}

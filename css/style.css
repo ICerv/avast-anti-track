@@ -91,12 +91,7 @@ main {
   line-height: 1.375;
   font-size: 1.5rem;
 }
-.price__box--text {
-  font-size: 0.875rem;
-  line-height: 1.5;
-}
-
-.card__price {
+.price__box--content {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -107,23 +102,40 @@ main {
   border-radius: 15px;
   padding: 5px;
 }
-.card__price--content span {
+.price__box--text {
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+.price__box--text strong {
+  font-size: large;
+  line-height: 1.375;
+}
+.price__box--text span {
   margin: 15px 0;
   color: #000;
   line-height: 1.375;
-  font-size: 0.875rem;
-}
-.card__price strong {
   font-size: 1rem;
-  line-height: 1.375;
-  color: #000;
 }
-.card__price--icon {
+.price__box--text-large {
+  font-size: 1.5rem;
+  line-height: 1.375;
+}
+.price__box--text-large strong {
+  font-size: 2.5rem;
+}
+.price__box--text-large span {
+  font-size: 1.5rem;
+}
+.price__box--icon {
   width: 20px;
   height: 20px;
   margin-right: 10px;
 }
-.card__price--button {
+.price__box--icon-avast {
+  width: 40px;
+  height: 40px;
+}
+.price__box--button {
   width: -moz-fit-content;
   width: fit-content;
   color: #fff;
@@ -136,18 +148,14 @@ main {
   outline: none;
   border: none;
 }
-.card__price--button:hover {
-  background-color: #7bb5fb;
-}
-.card__price--button:active {
-  background-color: #7bb5fb;
-}
-
-.description--text {
-  font-size: 0.625rem;
+.price__box--description {
+  font-size: 0.875rem;
   line-height: 1.5;
   margin: 1rem;
   color: #8a8e91;
+}
+.price__box--support {
+  font-size: 1rem;
 }
 
 /*** SECTION 3 ***/
@@ -173,4 +181,20 @@ main {
 }
 
 /*** SECTION 4 ***/
-/*** FOOTER ***//*# sourceMappingURL=style.css.map */
+/*** FOOTER ***/
+footer {
+  height: 100px;
+  margin: 15px;
+}
+footer__top {
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+footer__bottom {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
+}/*# sourceMappingURL=style.css.map */
