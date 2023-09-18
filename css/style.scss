@@ -1,10 +1,30 @@
 @import './partials/_variables.scss';
 @import './partials/_mixins.scss';
 @import './partials/_base.scss';
+@import './partials/_toggle-switch.scss';
 
 /*===== GOOGLE FONTS =====*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
+/*** DARK / LIGHT THEME ***/
+[data-theme='dark'] {
+  body {
+    background-color: $bg-color-dark;
+    color: $text-color-dark;
+  }
+
+  .hero__heading,
+  .price__box--heading {
+    color: $white;
+  }
+
+  .price__box--text,
+  .price__box--heading-avast,
+  .price__box--text-avast,
+  .price__box--guarantee {
+    color: $text-color-light;
+  }
+}
 /*** SCROLL TOP ***/
 .scroll__top {
   position: fixed;
@@ -39,6 +59,10 @@
 }
 /*** HEADER ***/
 .header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   margin: 2rem 0.5rem 0.5rem;
 
   &__logo--img {
@@ -69,9 +93,10 @@ main {
   }
 
   &__image {
-    width: 100%;
+    width: 95%;
     height: 100%;
     object-fit: cover;
+    border-radius: 50%;
     animation: move 2s infinite ease alternate;
   }
 

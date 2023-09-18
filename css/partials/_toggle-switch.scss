@@ -1,0 +1,59 @@
+.theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+
+  span {
+    margin-right: 0.5rem;
+    font-size: 1rem;
+    font-style: $font-bold;
+  }
+}
+
+.theme-switch {
+  display: inline-block;
+  height: 1.75rem;
+  position: relative;
+  width: 3rem;
+
+  input {
+    display: none;
+  }
+}
+
+.slider {
+  background-color: #c8c8c8;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.4s;
+
+  &:before {
+    background-color: #fff;
+    bottom: 0.25rem;
+    content: '';
+    width: 1.25rem;
+    height: 1.25rem;
+    left: 0.25rem;
+    position: absolute;
+    transition: 0.4s;
+  }
+}
+
+input:checked + .slider {
+  background-color: #62b283;
+}
+
+input:checked + .slider:before {
+  transform: translateX(1rem);
+}
+
+.slider.round {
+  border-radius: 2rem;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}

@@ -16,7 +16,8 @@ body {
   min-height: 100vh;
   font-family: $font-family;
   font-size: $font-base;
-  background-color: $white;
+  background-color: $bg-color-light;
+  color: $text-color-light;
 }
 
 img {
