@@ -117,6 +117,9 @@ input:checked + .slider:before {
 [data-theme=dark] .price__box--guarantee {
   color: #000;
 }
+[data-theme=dark] .price__box--support a {
+  color: #0070f6;
+}
 
 /*** SCROLL TOP ***/
 .scroll__top {
@@ -174,7 +177,7 @@ main {
   margin-bottom: 1rem;
   color: #000;
   line-height: 1.375;
-  font-size: 2.5rem;
+  font-size: 3rem;
 }
 .hero__text {
   font-size: 0.875rem;
@@ -300,6 +303,7 @@ main {
 .product__card--img {
   width: 80%;
   vertical-align: middle;
+  border-radius: 50%;
 }
 
 /*** SECTION 4 ***/

@@ -24,6 +24,12 @@
   .price__box--guarantee {
     color: $text-color-light;
   }
+
+  .price__box--support {
+    a {
+      color: $blue;
+    }
+  }
 }
 /*** SCROLL TOP ***/
 .scroll__top {
@@ -82,7 +88,7 @@ main {
     margin-bottom: 1rem;
     color: $primary-color;
     line-height: $line-height-sm;
-    font-size: $font-2xl;
+    font-size: $font-3xl;
   }
 
   &__text {
@@ -213,6 +219,7 @@ main {
   &__card--img {
     width: 80%;
     vertical-align: middle;
+    border-radius: 50%;
   }
 }
 
