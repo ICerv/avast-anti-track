@@ -19,4 +19,21 @@ document.addEventListener('DOMContentLoaded', function () {
       behavior: 'smooth',
     });
   });
+
+  // /* ANIMATE IMAGE */
+
+  // const imageToAnimate = document.querySelector('.hero__image');
+
+  // const sr = ScrollReveal();
+
+  // const animateImage = (image) => {
+  //   sr.reveal(image, {
+  //     scale: 0.85,
+  //     duration: 800,
+  //     easing: 'ease-in-out',
+  //     delay: 200,
+  //   });
+  // };
+
+  // animateImage(imageToAnimate);
 });

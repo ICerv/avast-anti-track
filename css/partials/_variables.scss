@@ -1,25 +1,26 @@
 /*===== COLORS =====*/
 $white: #fff;
-$bg-card: #fff1e5;
 $primary-color: #000;
-// $light-text: #989da0;
+$secondary-color: #8a8e91;
 $blue: #0070f6;
-$blue-hover: #7bb5fb;
-
+$bg-card: #fff1e5;
 $border-card: #ffddbf;
 $border-product__card: #d9dee1;
-$secondary-color: #8a8e91;
 
 /*===== SIZES =====*/
-$font-2xl: 3rem;
-$font-xl: 2rem;
-$font-lg: 1.5rem;
-$font-base: 1rem;
-$font-md: 0.875rem;
-$font-sm: 0.625rem;
-$line-height: 1.5;
 
-$line-height__desktop: 1.625rem;
+$font-xs: 0.625rem;
+$font-sm: 0.75rem;
+$font-md: 0.875rem;
+$font-base: 1rem;
+$font-lg: 1.5rem;
+$font-xl: 2rem;
+$font-2xl: 2.5rem;
+$font-3xl: 3rem;
+
+$line-height-sm: 1.375;
+$line-height-md: 1.5;
+$line-height-lg: 1.625rem;
 
 $border-radius__button: 5px;
 $border-radius__card: 10px;

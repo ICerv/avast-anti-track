@@ -1,7 +1,6 @@
 @import './partials/_variables.scss';
 @import './partials/_mixins.scss';
 @import './partials/_base.scss';
-@import './partials/_responsive.scss';
 
 /*===== GOOGLE FONTS =====*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
@@ -9,21 +8,38 @@
 /*** SCROLL TOP ***/
 .scroll__top {
   position: fixed;
-  bottom: 20px;
-  right: 10px;
+  bottom: 1.25rem;
+  right: 0.625rem;
   color: $secondary-color;
-  padding: 10px;
+  padding: 0.625rem;
   border-radius: 50%;
   z-index: 1000;
+  animation: btnToTop 3s ease-in-out infinite;
+  transition: all 0.5s ease-in-out;
+
+  &:hover {
+    animation: none;
+  }
 
   &--icon {
     font-size: $font-xl;
   }
+
+  @keyframes btnToTop {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
 }
 /*** HEADER ***/
 .header {
-  height: 3rem;
-  margin: 0.625rem;
+  margin: 2rem 0.5rem 0.5rem;
 
   &__logo--img {
     width: 7.25rem;
@@ -31,31 +47,25 @@
   }
 }
 
-/*** MAIN ***/
 main {
   @include container;
-}
-
-section {
-  padding-top: 2rem;
 }
 
 /*** SECTION 1 ***/
 
 .hero {
-  height: auto;
-
   &__heading {
-    margin-bottom: 15px;
+    margin-bottom: 1rem;
     color: $primary-color;
-    line-height: 1.375;
-    font-size: 2.5rem;
+    line-height: $line-height-sm;
+    font-size: $font-2xl;
   }
 
   &__text {
     font-size: $font-md;
-    line-height: 1.7;
+    line-height: $line-height-lg;
     margin-bottom: 1.25rem;
+    padding: 0 0.4rem;
   }
 
   &__image {
@@ -82,10 +92,6 @@ section {
   &--offer {
     display: flex;
     flex-direction: column;
-
-    &-lg {
-      margin: 0 auto;
-    }
   }
 
   &--heading {
@@ -101,74 +107,44 @@ section {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
     gap: 1rem;
-    border: 1px solid $border-card;
+    border: 2px solid $border-card;
     background-color: $bg-card;
     border-radius: 2rem;
     padding: 0.625rem;
-    margin: 0 auto;
   }
 
   &--text {
-    font-size: $font-md;
-    line-height: 1.5;
+    padding-top: 0.4rem;
 
     strong {
-      font-size: large;
+      font-size: $font-lg;
       line-height: 1.375;
+      letter-spacing: -0.075rem;
     }
 
     span {
-      margin: 15px 0;
-      color: $primary-color;
-      line-height: 1.375;
-      font-size: $font-base;
-    }
-  }
-
-  &--text-avast {
-    font-size: $font-lg;
-    line-height: 1.375;
-
-    strong {
-      font-size: 2rem;
-    }
-
-    span {
-      font-size: 1rem;
+      font-size: $font-md;
     }
   }
 
   &--icon {
-    width: 20px;
-    height: 20px;
+    width: 1rem;
+    height: 1rem;
     margin-right: 10px;
+    border-radius: 50%;
 
     &-avast {
-      width: 2rem;
-      height: 2rem;
+      width: 2.5rem;
+      height: 2.5rem;
     }
   }
   &--button {
-    width: fit-content;
-    color: $white;
-    font-size: 0.625rem;
-    text-transform: uppercase;
-    font-weight: 500;
-    border-radius: 20px;
-    padding: 8px 30px;
-    background-color: $blue;
-    outline: none;
-    border: none;
+    @include button;
   }
 
   &--description {
     @include lightText;
-  }
-
-  &--support {
-    font-size: 0.875rem;
   }
 }
 
@@ -177,8 +153,7 @@ section {
 .product {
   &__heading {
     margin: 15px auto;
-    color: $primary-color;
-    line-height: 1.375;
+    line-height: $line-height-sm;
     font-size: 1.3rem;
   }
 
@@ -187,9 +162,8 @@ section {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
     gap: 0.3rem;
-    // margin: 0 auto;
+    margin-bottom: 2rem;
     transition: 0.3s;
   }
 
@@ -197,27 +171,22 @@ section {
     padding: 1rem;
     border: 1px solid $border-product__card;
     border-radius: 2rem;
-    flex: 1 1 100%;
-    max-width: 300px;
-    min-height: 250px;
+    max-width: 19rem;
+    min-height: 15rem;
   }
+
   &__card--title {
-    margin: 15px 0;
-    color: $primary-color;
-    line-height: 1.375;
-    font-size: 0.875rem;
+    margin-top: 1rem;
+    line-height: $line-height-sm;
+    font-size: $font-md;
   }
 
   &__card--description {
-    font-size: 0.75rem;
-    margin: 10px;
-    line-height: $line-height;
-    color: $secondary-color;
+    @include lightText;
   }
 
   &__card--img {
-    width: 180px;
-    height: 100px;
+    width: 80%;
     vertical-align: middle;
   }
 }
@@ -232,18 +201,18 @@ section {
 
   &--content-avast {
     width: 100%;
-    border: 3px solid $border-card;
+    display: flex;
     background-color: $bg-card;
     border-radius: 2rem;
     padding: 1.5rem;
     margin: 0 auto;
     flex: 1 1 100%;
-    max-width: 600px;
-    min-height: 350px;
-    display: flex;
+    max-width: 37.5rem;
+    min-height: 22rem;
     flex-direction: column;
-    justify-content: space-between;
+    gap: 1rem;
     align-items: center;
+    border: 3px solid $border-card;
   }
 
   &--heading-avast {
@@ -255,36 +224,32 @@ section {
     line-height: 1.5;
 
     strong {
-      font-size: 2rem;
+      font-size: $font-xl;
     }
 
     span {
-      margin: 15px 0;
-      color: $primary-color;
-      line-height: 1.375;
       font-size: $font-base;
     }
   }
 
   &--button-avast {
-    width: fit-content;
-    color: $white;
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    font-weight: 500;
-    border-radius: 25px;
+    @include button;
+    font-size: $font-sm;
     padding: 1rem 2.5rem;
-    background-color: $blue;
-    outline: none;
-    border: none;
   }
 
   &--guarantee {
-    font-size: 0.75rem;
+    font-size: $font-sm;
   }
 
   &--description-avast {
     @include lightText;
+  }
+
+  &--support {
+    font-size: $font-md;
+    line-height: $line-height-md;
+    margin-top: 2rem;
   }
 }
 
@@ -293,8 +258,10 @@ section {
   .footer__top {
     @include lightText;
     @include container;
+
     text-align: left;
-    margin: 2rem auto;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
   }
 
   .footer__bottom {
@@ -303,7 +270,7 @@ section {
     justify-content: space-evenly;
     align-items: center;
     gap: 1.5rem;
-    margin: 20px auto;
+    margin: 1.25rem auto;
   }
 
   .footer__link--avast {
@@ -315,6 +282,7 @@ section {
 
   .footer__link {
     color: $blue;
+    font-size: $font-md;
   }
 }
 
@@ -322,7 +290,7 @@ section {
   .header {
     max-width: 80%;
     margin: 0 auto;
-    padding: 2.5rem 0;
+    padding: 2rem 0;
 
     &__logo--img {
       width: 10rem;
@@ -330,27 +298,29 @@ section {
     }
   }
 
-  main {
-    @include container;
+  main,
+  .footer {
     max-width: 70%;
   }
 
   .hero__heading {
     font-size: 3.5rem;
     line-height: 1.2;
+    width: 100%;
+    margin-bottom: 1.5rem;
   }
 
   .hero__text {
-    font-size: 19px;
-    line-height: 1.7;
+    font-size: 1.2rem;
+    line-height: $line-height-md;
+    padding: 0;
   }
 
   .price__box--heading {
-    font-size: 2rem;
+    font-size: $font-xl;
   }
 
   .price__box--content {
-    width: 30rem;
     padding: 1.2rem;
     justify-content: space-between;
     border-radius: 3rem;
@@ -358,44 +328,25 @@ section {
 
   .price__box--text {
     strong {
-      font-size: 1.5rem;
+      font-size: $font-lg;
     }
 
     span {
-      font-size: 1rem;
+      font-size: 1.2rem;
     }
   }
 
-  .price__box--icon {
-    width: 1.25rem;
-    height: 1.25rem;
-  }
-
   .price__box--button {
-    font-size: 1rem;
+    @include button;
+    @include hoverButton;
+    font-size: $font-base;
     border-radius: 2.5rem;
-    padding: 0.8rem 3rem;
-    font-weight: 600;
-  }
-
-  .price__box--button:hover {
-    background-color: $blue-hover;
-  }
-
-  .price__box--button:active {
-    background-color: $blue-hover;
-  }
-
-  .price__box--description {
-    font-size: 1rem;
-    margin: 1rem 7rem;
-    line-height: 1.7;
+    padding: 0.8rem 3.5rem;
   }
 
   .product {
     &__heading {
-      font-size: 1.5rem;
-      margin: 1rem 5rem;
+      font-size: $font-lg;
     }
 
     &__features {
@@ -403,47 +354,42 @@ section {
     }
 
     &__card {
-      flex: 1 1 calc(100% / 2);
       display: flex;
       flex-direction: column;
       align-items: center;
-      max-width: 250px;
-      min-height: 350px;
+      gap: 0.5rem;
+      max-width: 15rem;
+      min-height: 22rem;
+      padding: 1.5rem;
 
       &:hover {
         transform: scale(1.1);
         transition: 0.3s;
-        cursor: pointer;
       }
     }
 
     &__card--img {
-      width: 200px;
-      height: 110px;
+      width: 100%;
     }
 
     &__card--title {
-      font-size: 1.4rem;
+      font-size: 1.3rem;
     }
 
     &__card--description {
-      font-size: 0.875rem;
+      font-size: $font-md;
+      margin: 0;
     }
   }
 
   .price__box {
-    &--icon-avast {
-      width: 2.5rem;
-      height: 2.5rem;
-    }
-
     &--heading-avast {
       font-size: 2rem;
     }
 
     &--content-avast {
       padding: 2rem;
-      min-height: 400px;
+      min-height: 25rem;
     }
 
     &--text-avast {
@@ -457,13 +403,13 @@ section {
     }
 
     &--button-avast {
-      padding: 1.1rem 3rem;
+      padding: 1.3rem 3.5rem;
+      @include hoverButton;
     }
 
     &--description-avast {
       @include lightText;
-      font-size: 0.75rem;
-      margin: 1rem 9rem;
+      font-size: $font-base;
     }
   }
 
@@ -471,6 +417,10 @@ section {
   .footer {
     max-width: 70%;
     margin: 0 auto;
+
+    .footer__top {
+      line-height: 1.6;
+    }
 
     .footer__bottom {
       flex-direction: row;
@@ -485,26 +435,18 @@ section {
 
 @media (min-width: 1024px) {
   .header {
-    max-width: 80%;
-    margin: 0 auto;
-    padding: 2.5rem 0;
-    min-height: 8rem;
-
     &__logo--img {
       width: 15rem;
       height: 5rem;
     }
   }
-  section {
-    padding-top: 2rem;
-  }
 
   .hero__heading {
-    font-size: 5rem;
+    font-size: 4rem;
   }
 
   .hero__text {
-    font-size: 25px;
+    font-size: 1.4rem;
   }
 
   .price__box--heading {
@@ -512,11 +454,14 @@ section {
   }
 
   .price__box--content {
-    width: 40rem;
     padding-left: 2rem;
     padding-right: 2rem;
-  }
 
+    &-avast {
+      min-height: 30rem;
+      gap: 1.5rem;
+    }
+  }
   .price__box--text {
     strong {
       font-size: 2rem;
@@ -528,46 +473,54 @@ section {
   }
 
   .price__box--button {
-    font-size: 1.2rem;
+    font-size: $font-base;
     padding: 1rem 4rem;
+
+    &-avast {
+      font-size: $font-base;
+    }
   }
 
   .price__box--description,
   .price__box--description-avast {
+    font-size: $font-base;
+    line-height: $line-height-lg;
+  }
+
+  .price__box--guarantee {
     font-size: 1rem;
-    margin: 1.2rem 12rem;
   }
 
   .product {
     &__heading {
       font-size: 2rem;
-      margin: 0 9rem 2rem;
-    }
-
-    &__features {
-      gap: 1.5rem;
+      margin: 1.5rem 0;
     }
 
     &__card {
-      flex: 1 1 calc(100% / 2);
-      max-width: 300px;
-      min-height: 400px;
+      max-width: 18rem;
+      min-height: 25rem;
     }
 
     &__card--title {
-      font-size: 1.7rem;
+      font-size: $font-lg;
     }
 
     &__card--description {
-      font-size: 1.125rem;
+      font-size: $font-base;
     }
   }
 
   .price__box--support {
     font-size: 1.1rem;
+
+    a {
+      color: $blue;
+    }
   }
 
-  .footer__top {
-    font-size: 1rem;
+  .footer,
+  main {
+    max-width: 60%;
   }
 }
