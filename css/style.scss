@@ -326,7 +326,7 @@ main {
 
 @media (min-width: 768px) {
   .header {
-    max-width: 80%;
+    max-width: 85vw;
     margin: 0 auto;
     padding: 2rem 0;
 
@@ -475,10 +475,14 @@ main {
 }
 
 @media (min-width: 1024px) {
+  .header {
+    max-width: 75vw;
+  }
+
   main,
   .footer {
     @include container;
-    max-width: 65%;
+    max-width: 65vw;
     padding: 0 2rem;
   }
 
@@ -565,5 +569,26 @@ main {
     a {
       color: $blue;
     }
+  }
+}
+
+@media (min-width: 1440px) {
+  .header {
+    max-width: 50vw;
+  }
+
+  main,
+  .footer {
+    max-width: 47vw;
+  }
+}
+@media (min-width: 2560px) {
+  .header {
+    max-width: 30vw;
+  }
+
+  main,
+  .footer {
+    max-width: 26vw;
   }
 }
