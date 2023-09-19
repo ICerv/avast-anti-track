@@ -117,6 +117,9 @@ input:checked + .slider:before {
 [data-theme=dark] .price__box--guarantee {
   color: #000;
 }
+[data-theme=dark] .price__box--support a {
+  color: #0070f6;
+}
 
 /*** SCROLL TOP ***/
 .scroll__top {
@@ -162,11 +165,13 @@ input:checked + .slider:before {
 }
 
 main {
-  max-width: 90%;
+  max-width: 100%;
   margin: 0 auto;
   text-align: center;
   position: relative;
   overflow-x: hidden;
+  padding: 0 2.5rem;
+  min-width: 375px;
 }
 
 /*** SECTION 1 ***/
@@ -179,7 +184,7 @@ main {
 .hero__text {
   font-size: 0.875rem;
   line-height: 1.625rem;
-  margin-bottom: 1.25rem;
+  margin-bottom: 2rem;
   padding: 0 0.4rem;
 }
 .hero__image {
@@ -203,6 +208,7 @@ main {
 .price__box--offer {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 .price__box--heading {
   margin: 15px 0;
@@ -223,6 +229,11 @@ main {
   padding: 0.625rem;
 }
 .price__box--text {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3rem;
   padding-top: 0.4rem;
 }
 .price__box--text strong {
@@ -278,13 +289,13 @@ main {
   gap: 0.3rem;
   margin-bottom: 2rem;
   transition: 0.3s;
+  width: 100%;
 }
 .product__card {
   padding: 1rem;
   border: 1px solid #d9dee1;
   border-radius: 2rem;
-  max-width: 19rem;
-  min-height: 15rem;
+  max-width: 20rem;
 }
 .product__card--title {
   margin-top: 1rem;
@@ -300,6 +311,7 @@ main {
 .product__card--img {
   width: 80%;
   vertical-align: middle;
+  border-radius: 50%;
 }
 
 /*** SECTION 4 ***/
@@ -374,11 +386,13 @@ main {
   line-height: 1.5;
   margin: 0.8rem 0;
   color: #8a8e91;
-  max-width: 90%;
+  max-width: 100%;
   margin: 0 auto;
   text-align: center;
   position: relative;
   overflow-x: hidden;
+  padding: 0 2.5rem;
+  min-width: 375px;
   text-align: left;
   margin-top: 2rem;
   margin-bottom: 3rem;
@@ -474,8 +488,7 @@ main {
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
-    max-width: 15rem;
-    min-height: 22rem;
+    flex: 1 1 40%;
     padding: 1.5rem;
   }
   .product__card:hover {

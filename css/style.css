@@ -165,11 +165,13 @@ input:checked + .slider:before {
 }
 
 main {
-  max-width: 90%;
+  max-width: 100%;
   margin: 0 auto;
   text-align: center;
   position: relative;
   overflow-x: hidden;
+  padding: 0 2.5rem;
+  min-width: 375px;
 }
 
 /*** SECTION 1 ***/
@@ -177,7 +179,7 @@ main {
   margin-bottom: 1rem;
   color: #000;
   line-height: 1.375;
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 .hero__text {
   font-size: 0.875rem;
@@ -231,6 +233,7 @@ main {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  gap: 0.3rem;
   padding-top: 0.4rem;
 }
 .price__box--text strong {
@@ -383,11 +386,13 @@ main {
   line-height: 1.5;
   margin: 0.8rem 0;
   color: #8a8e91;
-  max-width: 90%;
+  max-width: 100%;
   margin: 0 auto;
   text-align: center;
   position: relative;
   overflow-x: hidden;
+  padding: 0 2.5rem;
+  min-width: 375px;
   text-align: left;
   margin-top: 2rem;
   margin-bottom: 3rem;
