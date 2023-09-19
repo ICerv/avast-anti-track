@@ -15,13 +15,12 @@
 
   .hero__heading,
   .price__box--heading {
-    color: $white;
+    color: $text-color-dark;
   }
 
-  .price__box--text,
   .price__box--heading-avast,
   .price__box--text-avast,
-  .price__box--guarantee {
+  .price__box--price {
     color: $text-color-light;
   }
 
@@ -31,6 +30,7 @@
     }
   }
 }
+
 /*** SCROLL TOP ***/
 .scroll__top {
   position: fixed;
@@ -69,11 +69,10 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin: 2rem 1rem 0.5rem;
+  padding: 1rem;
 
-  &__logo--img {
-    width: 7.25rem;
-    height: 2.25rem;
+  a {
+    flex-basis: 40%;
   }
 }
 
@@ -88,7 +87,7 @@ main {
     margin-bottom: 1rem;
     color: $primary-color;
     line-height: $line-height-sm;
-    font-size: $font-3xl;
+    font-size: $font-2xl;
   }
 
   &__text {
@@ -99,8 +98,7 @@ main {
   }
 
   &__image {
-    width: 95%;
-    height: 100%;
+    width: 100%;
     object-fit: cover;
     border-radius: 50%;
     animation: move 2s infinite ease alternate;
@@ -146,14 +144,34 @@ main {
     padding: 0.625rem;
   }
 
-  &--text {
+  &--price {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 0.3rem;
+    gap: 0.5rem;
+    font-size: $font-sm;
     padding-top: 0.4rem;
+  }
 
+  &--icon {
+    width: 2rem;
+    height: 2rem;
+    background-color: white;
+    border: 2px solid $border-card;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      max-width: 60%;
+      max-height: 60%;
+      border-radius: 50%;
+    }
+  }
+
+  &--text {
     strong {
       font-size: $font-lg;
       line-height: 1.375;
@@ -166,11 +184,6 @@ main {
   }
 
   &--icon {
-    width: 1rem;
-    height: 1rem;
-    margin-right: 10px;
-    border-radius: 50%;
-
     &-avast {
       width: 2.5rem;
       height: 2.5rem;
@@ -257,6 +270,16 @@ main {
     font-size: 1.5rem;
   }
 
+  &--icon-top {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 0.5rem;
+  }
+  &--icon-avast {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
   &--text-avast {
     font-size: 12px;
     line-height: 1.5;
@@ -326,26 +349,22 @@ main {
 
 @media (min-width: 768px) {
   .header {
-    max-width: 85vw;
-    margin: 0 auto;
-    padding: 2rem 0;
+    padding: 2rem;
 
-    &__logo--img {
-      width: 10rem;
-      height: 3rem;
+    a {
+      flex-basis: 30%;
     }
   }
 
   main,
   .footer {
-    max-width: 70%;
+    max-width: 70vw;
     padding: 0;
   }
 
   .hero__heading {
-    font-size: 3.5rem;
+    font-size: 3rem;
     line-height: 1.2;
-    width: 100%;
     margin-bottom: 1.5rem;
   }
 
@@ -355,34 +374,45 @@ main {
     padding: 0;
   }
 
-  .price__box--heading {
-    font-size: $font-xl;
-  }
-
-  .price__box--content {
-    padding: 1.2rem;
-    justify-content: space-between;
-    border-radius: 3rem;
-  }
-
-  .price__box--text {
-    strong {
-      font-size: $font-lg;
+  .price__box {
+    &--heading {
+      font-size: $font-xl;
     }
 
-    span {
-      font-size: 1.2rem;
+    &--content {
+      padding: 1.2rem;
+      justify-content: space-between;
+      border-radius: 3rem;
+    }
+
+    &--icon {
+      width: 2.5rem;
+      height: 2.5rem;
+
+      img {
+        max-width: 65%;
+        max-height: 65%;
+      }
+    }
+
+    &--text {
+      strong {
+        font-size: $font-lg;
+      }
+
+      span {
+        font-size: 1.2rem;
+      }
+    }
+
+    &--button {
+      @include button;
+      @include hoverButton;
+      font-size: $font-base;
+      border-radius: 2.5rem;
+      padding: 0.8rem 3.5rem;
     }
   }
-
-  .price__box--button {
-    @include button;
-    @include hoverButton;
-    font-size: $font-base;
-    border-radius: 2.5rem;
-    padding: 0.8rem 3.5rem;
-  }
-
   .product {
     &__heading {
       font-size: $font-lg;
@@ -395,10 +425,10 @@ main {
     &__card {
       display: flex;
       flex-direction: column;
-      align-items: center;
-      gap: 0.5rem;
+      gap: 1rem;
       flex: 1 1 40%;
-      padding: 1.5rem;
+      align-items: stretch;
+      padding: 3rem 1.3rem;
 
       &:hover {
         transform: scale(1.1);
@@ -415,7 +445,8 @@ main {
     }
 
     &__card--description {
-      font-size: $font-md;
+      font-size: $font-base;
+      line-height: 1.7;
       margin: 0;
     }
   }
@@ -423,6 +454,11 @@ main {
   .price__box {
     &--heading-avast {
       font-size: 2rem;
+    }
+
+    &--price,
+    &--guarantee {
+      font-size: $font-base;
     }
 
     &--content-avast {
@@ -445,15 +481,24 @@ main {
       @include hoverButton;
     }
 
-    &--description-avast {
+    &--description-avast,
+    &--description {
       @include lightText;
       font-size: $font-base;
+    }
+
+    &--support {
+      font-size: 1.2rem;
+
+      a {
+        color: $blue;
+      }
     }
   }
 
   /*** FOOTER ***/
   .footer {
-    max-width: 70%;
+    max-width: 70vw;
     margin: 0 auto;
 
     .footer__top {
@@ -467,30 +512,23 @@ main {
       justify-content: space-between;
       margin-bottom: 4rem;
     }
-
-    .footer__link {
-      color: $blue;
-    }
   }
 }
 
 @media (min-width: 1024px) {
   .header {
-    max-width: 75vw;
+    padding: 3rem;
+
+    a {
+      flex-basis: 25%;
+    }
   }
 
   main,
   .footer {
     @include container;
-    max-width: 65vw;
-    padding: 0 2rem;
-  }
-
-  .header {
-    &__logo--img {
-      width: 15rem;
-      height: 5rem;
-    }
+    max-width: 60vw;
+    padding: 0;
   }
 
   .hero__heading {
@@ -524,24 +562,24 @@ main {
     }
   }
 
-  .price__box--button {
-    font-size: $font-base;
-    padding: 1rem 4rem;
+  //   .price__box--button {
+  //     font-size: $font-base;
+  //     padding: 1rem 4rem;
 
-    &-avast {
-      font-size: $font-base;
-    }
-  }
+  //     &-avast {
+  //       font-size: $font-base;
+  //     }
+  //   }
 
-  .price__box--description,
-  .price__box--description-avast {
-    font-size: $font-base;
-    line-height: $line-height-lg;
-  }
+  //   .price__box--description,
+  //   .price__box--description-avast {
+  //     font-size: $font-base;
+  //     line-height: $line-height-lg;
+  //   }
 
-  .price__box--guarantee {
-    font-size: 1rem;
-  }
+  //   .price__box--guarantee {
+  //     font-size: 1rem;
+  //   }
 
   .product {
     &__heading {
@@ -550,8 +588,7 @@ main {
     }
 
     &__card {
-      max-width: 18rem;
-      min-height: 25rem;
+      padding: 3rem 2.5rem;
     }
 
     &__card--title {
@@ -562,19 +599,12 @@ main {
       font-size: $font-base;
     }
   }
-
-  .price__box--support {
-    font-size: 1.1rem;
-
-    a {
-      color: $blue;
-    }
-  }
 }
 
 @media (min-width: 1440px) {
   .header {
     max-width: 50vw;
+    margin: 0 auto;
   }
 
   main,
@@ -582,6 +612,7 @@ main {
     max-width: 47vw;
   }
 }
+
 @media (min-width: 2560px) {
   .header {
     max-width: 30vw;
@@ -589,6 +620,6 @@ main {
 
   main,
   .footer {
-    max-width: 26vw;
+    max-width: 24vw;
   }
 }
