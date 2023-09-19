@@ -170,8 +170,8 @@ main {
   text-align: center;
   position: relative;
   overflow-x: hidden;
-  padding: 0 2.5rem;
-  min-width: 375px;
+  padding: 0 3rem;
+  min-width: 425px;
 }
 
 /*** SECTION 1 ***/
@@ -179,10 +179,10 @@ main {
   margin-bottom: 1rem;
   color: #000;
   line-height: 1.375;
-  font-size: 2.5rem;
+  font-size: 3rem;
 }
 .hero__text {
-  font-size: 0.875rem;
+  font-size: 1rem;
   line-height: 1.625rem;
   margin-bottom: 2rem;
   padding: 0 0.4rem;
@@ -269,7 +269,7 @@ main {
   cursor: pointer;
 }
 .price__box--description {
-  font-size: 0.75rem;
+  font-size: 0.8125rem;
   line-height: 1.5;
   margin: 0.8rem 0;
   color: #8a8e91;
@@ -303,7 +303,7 @@ main {
   font-size: 0.875rem;
 }
 .product__card--description {
-  font-size: 0.75rem;
+  font-size: 0.8125rem;
   line-height: 1.5;
   margin: 0.8rem 0;
   color: #8a8e91;
@@ -362,27 +362,27 @@ main {
   outline: none;
   border: none;
   cursor: pointer;
-  font-size: 0.75rem;
+  font-size: 0.8125rem;
   padding: 1rem 2.5rem;
 }
 .price__box--guarantee {
-  font-size: 0.75rem;
+  font-size: 0.8125rem;
 }
 .price__box--description-avast {
-  font-size: 0.75rem;
+  font-size: 0.8125rem;
   line-height: 1.5;
   margin: 0.8rem 0;
   color: #8a8e91;
 }
 .price__box--support {
-  font-size: 0.875rem;
+  font-size: 1rem;
   line-height: 1.5;
   margin-top: 2rem;
 }
 
 /*** FOOTER ***/
 .footer .footer__top {
-  font-size: 0.75rem;
+  font-size: 0.8125rem;
   line-height: 1.5;
   margin: 0.8rem 0;
   color: #8a8e91;
@@ -391,8 +391,8 @@ main {
   text-align: center;
   position: relative;
   overflow-x: hidden;
-  padding: 0 2.5rem;
-  min-width: 375px;
+  padding: 0 3rem;
+  min-width: 425px;
   text-align: left;
   margin-top: 2rem;
   margin-bottom: 3rem;
@@ -527,7 +527,7 @@ main {
     transition: transform 0.3s ease;
   }
   .price__box--description-avast {
-    font-size: 0.75rem;
+    font-size: 0.8125rem;
     line-height: 1.5;
     margin: 0.8rem 0;
     color: #8a8e91;
@@ -785,7 +785,7 @@ section {
     transition: transform 0.3s ease;
   }
   .price__box--description-avast {
-    font-size: 0.75rem;
+    font-size: 0.8125rem;
     line-height: 1.5;
     margin: 0.8rem 0;
     color: #8a8e91;

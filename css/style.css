@@ -157,7 +157,7 @@ input:checked + .slider:before {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin: 2rem 0.5rem 0.5rem;
+  margin: 2rem 1rem 0.5rem;
 }
 .header__logo--img {
   width: 7.25rem;
@@ -170,8 +170,8 @@ main {
   text-align: center;
   position: relative;
   overflow-x: hidden;
-  padding: 0 2.5rem;
-  min-width: 375px;
+  padding: 0 3rem;
+  min-width: 425px;
 }
 
 /*** SECTION 1 ***/
@@ -179,10 +179,10 @@ main {
   margin-bottom: 1rem;
   color: #000;
   line-height: 1.375;
-  font-size: 2.5rem;
+  font-size: 3rem;
 }
 .hero__text {
-  font-size: 0.875rem;
+  font-size: 1rem;
   line-height: 1.625rem;
   margin-bottom: 2rem;
   padding: 0 0.4rem;
@@ -269,7 +269,7 @@ main {
   cursor: pointer;
 }
 .price__box--description {
-  font-size: 0.75rem;
+  font-size: 0.8125rem;
   line-height: 1.5;
   margin: 0.8rem 0;
   color: #8a8e91;
@@ -303,7 +303,7 @@ main {
   font-size: 0.875rem;
 }
 .product__card--description {
-  font-size: 0.75rem;
+  font-size: 0.8125rem;
   line-height: 1.5;
   margin: 0.8rem 0;
   color: #8a8e91;
@@ -362,27 +362,27 @@ main {
   outline: none;
   border: none;
   cursor: pointer;
-  font-size: 0.75rem;
+  font-size: 0.8125rem;
   padding: 1rem 2.5rem;
 }
 .price__box--guarantee {
-  font-size: 0.75rem;
+  font-size: 0.8125rem;
 }
 .price__box--description-avast {
-  font-size: 0.75rem;
+  font-size: 0.8125rem;
   line-height: 1.5;
   margin: 0.8rem 0;
   color: #8a8e91;
 }
 .price__box--support {
-  font-size: 0.875rem;
+  font-size: 1rem;
   line-height: 1.5;
   margin-top: 2rem;
 }
 
 /*** FOOTER ***/
 .footer .footer__top {
-  font-size: 0.75rem;
+  font-size: 0.8125rem;
   line-height: 1.5;
   margin: 0.8rem 0;
   color: #8a8e91;
@@ -391,8 +391,8 @@ main {
   text-align: center;
   position: relative;
   overflow-x: hidden;
-  padding: 0 2.5rem;
-  min-width: 375px;
+  padding: 0 3rem;
+  min-width: 425px;
   text-align: left;
   margin-top: 2rem;
   margin-bottom: 3rem;
@@ -400,7 +400,7 @@ main {
 .footer .footer__bottom {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   gap: 1.5rem;
   margin: 1.25rem auto;
@@ -429,6 +429,7 @@ main {
   main,
   .footer {
     max-width: 70%;
+    padding: 0;
   }
   .hero__heading {
     font-size: 3.5rem;
@@ -527,7 +528,7 @@ main {
     transition: transform 0.3s ease;
   }
   .price__box--description-avast {
-    font-size: 0.75rem;
+    font-size: 0.8125rem;
     line-height: 1.5;
     margin: 0.8rem 0;
     color: #8a8e91;
@@ -540,16 +541,31 @@ main {
   }
   .footer .footer__top {
     line-height: 1.6;
+    font-size: 1rem;
+    padding: 0;
   }
   .footer .footer__bottom {
     flex-direction: row;
     justify-content: space-between;
+    margin-bottom: 4rem;
   }
   .footer .footer__link {
     color: #0070f6;
   }
 }
 @media (min-width: 1024px) {
+  main,
+  .footer {
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    overflow-x: hidden;
+    padding: 0 3rem;
+    min-width: 425px;
+    max-width: 65%;
+    padding: 0 2rem;
+  }
   .header__logo--img {
     width: 15rem;
     height: 5rem;
@@ -558,7 +574,7 @@ main {
     font-size: 4rem;
   }
   .hero__text {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
   .price__box--heading {
     font-size: 2.5rem;
@@ -611,9 +627,5 @@ main {
   }
   .price__box--support a {
     color: #0070f6;
-  }
-  .footer,
-  main {
-    max-width: 60%;
   }
 }/*# sourceMappingURL=style.css.map */

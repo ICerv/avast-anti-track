@@ -69,7 +69,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin: 2rem 0.5rem 0.5rem;
+  margin: 2rem 1rem 0.5rem;
 
   &__logo--img {
     width: 7.25rem;
@@ -88,11 +88,11 @@ main {
     margin-bottom: 1rem;
     color: $primary-color;
     line-height: $line-height-sm;
-    font-size: $font-2xl;
+    font-size: $font-3xl;
   }
 
   &__text {
-    font-size: $font-md;
+    font-size: $font-base;
     line-height: $line-height-lg;
     margin-bottom: 2rem;
     padding: 0 0.4rem;
@@ -285,7 +285,7 @@ main {
   }
 
   &--support {
-    font-size: $font-md;
+    font-size: $font-base;
     line-height: $line-height-md;
     margin-top: 2rem;
   }
@@ -305,7 +305,7 @@ main {
   .footer__bottom {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     gap: 1.5rem;
     margin: 1.25rem auto;
@@ -339,6 +339,7 @@ main {
   main,
   .footer {
     max-width: 70%;
+    padding: 0;
   }
 
   .hero__heading {
@@ -457,11 +458,14 @@ main {
 
     .footer__top {
       line-height: 1.6;
+      font-size: 1rem;
+      padding: 0;
     }
 
     .footer__bottom {
       flex-direction: row;
       justify-content: space-between;
+      margin-bottom: 4rem;
     }
 
     .footer__link {
@@ -471,6 +475,13 @@ main {
 }
 
 @media (min-width: 1024px) {
+  main,
+  .footer {
+    @include container;
+    max-width: 65%;
+    padding: 0 2rem;
+  }
+
   .header {
     &__logo--img {
       width: 15rem;
@@ -483,7 +494,7 @@ main {
   }
 
   .hero__text {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
 
   .price__box--heading {
@@ -554,10 +565,5 @@ main {
     a {
       color: $blue;
     }
-  }
-
-  .footer,
-  main {
-    max-width: 60%;
   }
 }
