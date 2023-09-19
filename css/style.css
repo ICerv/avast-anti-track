@@ -619,6 +619,21 @@ main {
   .price__box--text span {
     font-size: 1.5rem;
   }
+  .price__box--button {
+    font-size: 1rem;
+    padding: 1rem 4rem;
+  }
+  .price__box--button-avast {
+    font-size: 1rem;
+  }
+  .price__box--description,
+  .price__box--description-avast {
+    font-size: 1rem;
+    line-height: 1.625rem;
+  }
+  .price__box--guarantee {
+    font-size: 1rem;
+  }
   .product__heading {
     font-size: 2rem;
     margin: 1.5rem 0;

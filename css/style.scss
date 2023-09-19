@@ -562,24 +562,24 @@ main {
     }
   }
 
-  //   .price__box--button {
-  //     font-size: $font-base;
-  //     padding: 1rem 4rem;
+  .price__box--button {
+    font-size: $font-base;
+    padding: 1rem 4rem;
 
-  //     &-avast {
-  //       font-size: $font-base;
-  //     }
-  //   }
+    &-avast {
+      font-size: $font-base;
+    }
+  }
 
-  //   .price__box--description,
-  //   .price__box--description-avast {
-  //     font-size: $font-base;
-  //     line-height: $line-height-lg;
-  //   }
+  .price__box--description,
+  .price__box--description-avast {
+    font-size: $font-base;
+    line-height: $line-height-lg;
+  }
 
-  //   .price__box--guarantee {
-  //     font-size: 1rem;
-  //   }
+  .price__box--guarantee {
+    font-size: 1rem;
+  }
 
   .product {
     &__heading {
