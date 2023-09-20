@@ -168,7 +168,7 @@ main {
   text-align: center;
   position: relative;
   overflow-x: hidden;
-  padding: 0 3rem;
+  padding: 0 1.5rem;
 }
 
 /*** SECTION 1 ***/
@@ -176,7 +176,7 @@ main {
   margin-bottom: 1rem;
   color: #000;
   line-height: 1.375;
-  font-size: 2.5rem;
+  font-size: 2.7rem;
 }
 .hero__text {
   font-size: 1rem;
@@ -406,7 +406,7 @@ main {
   text-align: center;
   position: relative;
   overflow-x: hidden;
-  padding: 0 3rem;
+  padding: 0 1.5rem;
   text-align: left;
   margin-top: 2rem;
   margin-bottom: 3rem;
@@ -510,10 +510,6 @@ main {
     align-items: stretch;
     padding: 3rem 1.3rem;
   }
-  .product__card:hover {
-    transform: scale(1.1);
-    transition: 0.3s;
-  }
   .product__card--img {
     width: 100%;
   }
@@ -592,7 +588,7 @@ main {
     text-align: center;
     position: relative;
     overflow-x: hidden;
-    padding: 0 3rem;
+    padding: 0 1.5rem;
     max-width: 60vw;
     padding: 0;
   }
@@ -648,22 +644,146 @@ main {
     font-size: 1rem;
   }
 }
-@media (min-width: 1440px) {
+@media (min-width: 2560px) {
   .header {
+    max-width: 80vw;
+    margin: 0 auto;
+    justify-content: space-around;
+  }
+  .header a {
+    flex-basis: 20%;
+  }
+  .theme-switch-wrapper span {
+    margin-right: 1rem;
+    font-size: 1.5rem;
+  }
+  main,
+  .footer {
+    max-width: 40vw;
+  }
+  .hero__heading {
+    font-size: 6rem;
+  }
+  .hero__text {
+    font-size: 2.2rem;
+  }
+  .price__box--heading,
+  .price__box--heading-avast {
+    font-size: 4rem;
+  }
+  .price__box--content {
+    padding: 2rem 3rem;
+    border-radius: 6rem;
+    margin-top: 1rem;
+  }
+  .price__box--button {
+    font-size: 2rem;
+    padding: 1.5rem 7rem;
+    border-radius: 4rem;
+  }
+  .price__box--price {
+    gap: 1.5rem;
+  }
+  .price__box--text strong {
+    font-size: 3rem;
+  }
+  .price__box--text span {
+    font-size: 2.5rem;
+  }
+  .price__box--icon {
+    width: 5rem;
+    height: 5rem;
+  }
+  .price__box--icon img {
+    max-width: 60%;
+    max-height: 60%;
+  }
+  .price__box--description,
+  .price__box--description-avast {
+    font-size: 1.9rem;
+    line-height: 3rem;
+    margin: 2.5rem;
+  }
+  .product__heading {
+    font-size: 3rem;
+    margin: 3rem 0;
+  }
+  .product__features {
+    gap: 2rem;
+  }
+  .product__card {
+    max-width: 50%;
+    padding: 6rem 2.5rem;
+  }
+  .product__card--title {
+    font-size: 2.6rem;
+  }
+  .product__card--description {
+    font-size: 1.9rem;
+    line-height: 3rem;
+  }
+  .footer {
     max-width: 50vw;
     margin: 0 auto;
   }
-  main,
-  .footer {
-    max-width: 47vw;
+  .footer .footer__top {
+    line-height: 1.6;
+    font-size: 1.5rem;
+    padding: 0;
   }
-}
-@media (min-width: 2560px) {
-  .header {
-    max-width: 30vw;
+  .footer .footer__bottom {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 4rem;
   }
-  main,
-  .footer {
-    max-width: 24vw;
+  .price__box--content-avast {
+    max-width: 100%;
+    min-height: 60rem;
+    padding: 5rem 0;
+    gap: 2rem;
+  }
+  .price__box--icon-top {
+    width: 7rem;
+    height: 7rem;
+    border-radius: 1.5rem;
+  }
+  .price__box--text-avast strong {
+    font-size: 5.5rem;
+  }
+  .price__box--text-avast span {
+    font-size: 3rem;
+  }
+  .price__box--button-avast {
+    padding: 2.5rem 6rem;
+    border-radius: 7rem;
+    font-size: 2.5rem;
+  }
+  .price__box--icon-avast {
+    width: 3rem;
+    height: 3rem;
+  }
+  .price__box--price,
+  .price__box--guarantee {
+    font-size: 2rem;
+  }
+  .price__box--support {
+    font-size: 2rem;
+  }
+  .footer__top {
+    font-size: 1.9rem;
+  }
+  .footer .footer__top {
+    font-size: 1.9rem;
+    margin-bottom: 7rem;
+  }
+  .footer .footer__bottom {
+    margin-bottom: 6rem;
+    margin-top: 3rem;
+  }
+  .footer__heading {
+    font-size: 2rem;
+  }
+  .footer .footer__link {
+    font-size: 2rem;
   }
 }/*# sourceMappingURL=style.css.map */
